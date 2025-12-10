@@ -1,0 +1,122 @@
+<!-- Ryan Hamilton, ISTE 442 Final -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../backend/gameplay.js"></script>
+</head>
+    <style>
+        .points{
+            font-weight: 700;
+        }
+
+        #gameEnd{
+            background-color: white;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+        }
+
+        #playerAreas{
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+        }
+
+        #boardArea{
+            width: 750px;
+        }
+
+        #boardPlayerDiv{
+            display: flex;
+            gap: 50px;
+        }
+
+        .scoreboard{
+            font-size: 30pt;
+        }
+    </style>
+
+<div>
+
+
+    
+    <!-- Put the Board next to the players -->
+    <div id="boardPlayerDiv">
+    <!-- Board holding cards div -->
+        <div id="boardArea">
+            <!-- Player Turn -->
+             <svg width="710px" height="100px" id="curPlayerBanner">
+             </svg>
+
+           
+            <!-- Cards -->
+            <svg width="250px" height="300px" id="card1SVG"> 
+            </svg>
+
+            <svg width="250px" height="300px" id="card2SVG"> 
+            </svg>
+
+            <svg width="200px" height="300px" id="card3SVG"> 
+            </svg>
+
+             <!-- Rolling buttons -->
+            <div style="display: flex; justify-content: space-evenly;">
+            <button id="roll">Roll</button>
+                <div>       </div>
+
+                <button id="rollForIt">Roll for It!</button>
+                <div>       </div>
+
+
+                <button id="endTurn">End Turn</button>
+                
+            </div>
+
+        </div>
+
+
+
+        <div id="playerAreas">
+            <svg width="300px" height="100px" id="player1Area"> 
+            </svg>
+            
+            <svg width="300px" height="100px" id="player2Area"> 
+            </svg>
+
+            <svg width="300px" height="100px" id="player3Area"> 
+            </svg>
+
+            <svg width="300px" height="100px" id="player4Area"> 
+            </svg>
+
+
+
+        </div>
+    </div> 
+
+
+
+
+
+
+    <div id="gameEnd">
+
+    </div>
+
+</body>
+</html>
+<script>
+    init();
+
+//endTurn
+    document.getElementById('endTurn').onclick =  endTurnEvent;
+    document.getElementById('roll').onclick = rollDieEvent; 
+    document.getElementById('rollForIt').onclick = rollAllDieEvent; 
+
+
+    // document.getElementById('roll').addEventListener()
+</script>
