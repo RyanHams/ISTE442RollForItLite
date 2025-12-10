@@ -184,7 +184,7 @@ function gameStartRandomCards(){
  * Testing init, add 2 players and add 3 cards to board
  */
 function init(){
-    addPlayer(1,'wwwwwwwwwwwwwwwwwwww','purple');
+    addPlayer(1,'player1','purple');
     addPlayer(2,'player2','green');
     addPlayer(3,'player3','red');
     addPlayer(4,'player4','blue');
